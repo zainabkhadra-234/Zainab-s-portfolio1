@@ -3,17 +3,24 @@
   <head>
     <meta charset="UTF-8">
     <title>Zainab's portfolio</title>
-    <link rel="stylesheet" herf="style.css">
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
+    <nav>
+      <a href="#about">About Me</a> |
+       <a href="#projects">My projects</a> |
+       <a href="#contact">Contact</a> 
+    </nav>
     <header>
-       <h1> Hello,I'm Zainab</h1>
-      <nav>
-        <a herf="#about">About Me</a> |
-         <a herf="#projects">My projects</a> |
-         <a herf="#contact">Contact</a> 
-      </nav>
+      <div class="header-content">
+      <img src="img1/zainab.jpg" alt="Zainab's photo" class="porfile-pic  reveal">
+      <h1 class=" reveal">Hello,I'm Zainab</h1>
+      <p> hjkl</p>
+    </div> 
+   
     </header>
+   
+    <main>
 
     <section id="about">
       <h2>About Me</h2>
@@ -28,6 +35,33 @@
         <li>project 4: Blog Layout- A blog layouth I designed to understand the basics of creating and displaying blog posts</li>
       </ul>
     </section>
-    
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <form is="contact-form">
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="email" id="name" placeholder="Your Email" required>
+        <textarea id="message"v placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+    </main>
+    <footer>
+      <p>@ 2025 Zainab.ALL rights reserves.</p>
+    </footer>
+
+    <script>
+      window.addEventListener('scroll', function() {
+    var reveals = document.querySelectorAll('.reveal');
+    for (var i = 0; i < reveals.length; i++) {
+      var windowHeight = window.innerHeight;
+      var elementTop = reveals[i].getBoundingClientRect().top;
+      var elementVisible = 150;
+      if (elementTop < windowHeight - elementVisible) {
+        reveals[i].classList.add('active');
+      }
+    }
+  });
+    </script>
   </body>
   </html>
+
